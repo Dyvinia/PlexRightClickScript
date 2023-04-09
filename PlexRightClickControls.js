@@ -16,6 +16,7 @@
     waitForElm('[class^=HTMLMedia-mediaElement-]').then((elm) => {
         document.querySelector('[class^=HTMLMedia-mediaElement-]').setAttribute('onclick', "this[this.paused ? 'play' : 'pause']()");
         GM_addStyle('button[class^="PlayPauseOverlay-"] { pointer-events: none; }');
+        GM_addStyle('div[class^="Subtitles-"] { pointer-events: none; }');
     });
 
     function waitForElm(selector) {
